@@ -1,56 +1,79 @@
- body
- {
-  overflow: hidden;
- }
-
- .logo {
-    height: 30px; /* Ajustez la hauteur pour qu'elle corresponde au texte */
-    width: auto; /* Pour garder les proportions */
-}
-  .navbar-brand 
-  {
-            color: #007bff !important; /* Bleu */
-  }
-  
-  
-  .sidebar {
-    position: relative;
-    height: 90vh;
+body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
-.new-discussion-btn {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+.logo {
+    height: 30px;
+    width: auto;
 }
+
+.navbar-brand {
+    color: #007bff !important;
+}
+
+.sidebar {
+    height: calc(100vh - 56px); /* Ajuste la hauteur en fonction de la barre de navigation */
+}
+
 .nav-link {
-    font-size: 16px; /* Taille du texte */
-    color: #333; /* Couleur de base */
+    font-size: 16px;
+    color: #333;
     transition: color 0.3s ease;
     padding: 3;
     margin-left: -25px;
 }
 
 .nav-link i {
-    font-size: 18px; /* Taille de l'icône */
-    color: inherit; /* Hérite de la couleur du texte */
+    font-size: 18px;
+    color: inherit;
     padding-left: 0;
 }
 
 .nav-link:hover {
-    color: #007bff; /* Change la couleur au survol */
-}
-.form-control:hover
-{
-  cursor: pointer;
-  border: 2px solid blue;
+    color: #007bff;
 }
 
+.form-control:hover {
+    cursor: pointer;
+    border: 2px solid blue;
+}
 
 .form-control {
-    padding-left: 30px; /* Ajoute de l'espace à gauche pour l'icône */
-    background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/icons/search.svg'); /* Utilisation d'une icône de recherche */
+    padding-left: 30px;
+    background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/icons/search.svg');
     background-repeat: no-repeat;
-    background-position: 10px center; /* Positionne l'icône à gauche, centrée verticalement */
-    background-size: 18px; /* Taille de l'icône */
+    background-position: 10px center;
+    background-size: 18px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Styles pour le menu hamburger (responsive) */
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 56px; /* Hauteur de la barre de navigation */
+        left: -250px; /* Cache le menu hors de l'écran par défaut */
+        width: 250px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        left: 0; /* Affiche le menu lorsque la classe "show" est ajoutée */
+    }
+
+    .content {
+        padding-left: 0; /* Supprime le padding pour le contenu principal */
+    }
 }
