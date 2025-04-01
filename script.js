@@ -11,3 +11,10 @@ tabs.forEach(tab => {
         });
     });
 });
+// lien du buton 
+document.getElementById('monBouton').addEventListener('click', function() {
+  window.location.href = 'authentification.html'; 
+});
+
+
+
