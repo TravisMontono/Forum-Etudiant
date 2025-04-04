@@ -11,10 +11,6 @@ body {
     color: #007bff !important;
 }
 
-.sidebar {
-    height: calc(100vh - 56px); /* Ajuste la hauteur en fonction de la barre de navigation */
-}
-
 .nav-link {
     font-size: 16px;
     color: #333;
