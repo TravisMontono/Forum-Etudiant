@@ -7,10 +7,6 @@ body {
     width: auto;
 }
 
-.navbar-brand {
-    color: #007bff !important;
-}
-
 .nav-link {
     font-size: 16px;
     color: #333;
@@ -64,7 +60,11 @@ body {
         transition: left 0.3s ease;
         z-index: 1000;
     }
-
+    
+    .input{
+        display: none;
+    }
+    
     .sidebar.show {
         left: 0; /* Affiche le menu lorsque la classe "show" est ajoutée */
     }
