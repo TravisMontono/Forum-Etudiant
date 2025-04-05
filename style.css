@@ -6,6 +6,10 @@
     width: auto;
 }
 
+.none{
+    display: none;
+}
+
 .presentation img{
     object-fit: cover;
     width: 100%;
@@ -59,7 +63,7 @@ shadow{
 }
 
 /* Styles pour le menu hamburger (responsive) */
-@media (max-width: 991.98px) {
+@media only screen  and (max-width: 991.98px) {
     .sidebar {
         position: fixed;
         top: 56px; /* Hauteur de la barre de navigation */
@@ -68,11 +72,6 @@ shadow{
         transition: left 0.3s ease;
         z-index: 1000;
     }
-    
-    .input{
-        display: none;
-    }
-    
     .sidebar.show {
         left: 0; /* Affiche le menu lorsque la classe "show" est ajoutée */
     }
@@ -81,3 +80,15 @@ shadow{
         padding-left: 0; /* Supprime le padding pour le contenu principal */
     }
 }
+
+/* disparition du champ  de recherche droite remplacer par un button*/
+@media only screen  and (max-width:576px) {
+    .input{
+         display: none;
+    }
+    .none{
+        display: block;
+    }
+}
+
+/* tu dois faire un code en javascript pour faire appraitre le champ de recherche quand tu appuie surr le button*/
