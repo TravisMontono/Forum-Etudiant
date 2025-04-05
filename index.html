@@ -14,31 +14,31 @@
 </head>
 <body>
     <div class="d-flex">
-        <nav class="sidebar  sticky-top  vh-100 d-flex flex-column bg-dark navbar-dark px-5 text-white" id="sidebar">
+        <nav class="sidebar  sticky-top  vh-100 d-flex flex-column  px-5 text-white" id="sidebar">
             <a class="navbar-brand fs-5 mt-4" href="#" style="transform: translate(-10px);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 512 512"><path fill="#fff" d="M242.9 20.46c6.7 19.75 19.7 41.39 4 50.44-38.6 22.04-81.4 41.5-106.2 90.7C103.3 235.7 91.69 412 29.81 451c48.6 3.8 89.69-16.3 108.89-44.2 7.1 34.3 32.6 67 63 84.7-5.2-29-1.8-59.4 19-92.5 16.5 22.9 31.1 59.3 73.8 75.3-16.4-27.5-13.7-52.8-10.7-84.2 8.8 26.9 38.5 50 72.9 58.9-16.8-18.6-23.9-45.5-21-66 14.6 24.9 43.4 38.4 67.1 39.7-153.3-179.6-48.7-291.6 79.4-194.4-.5-49.7-31.4-66.7-67.2-95.7-.9-15.4-9.6-29.3-17.5-43.36-53.7-9.99-121.5-42.01-154.6-68.78zm81.2 74.88c26.1 10.86 46.2 22.56 56.4 35.46-16.6-3.6-39.8-3.5-70-1.1 15-9.7 16.5-21.7 13.6-34.36z"/></svg>
+            <input type="text" class="form-control" placeholder="Rechercher...">
             </a>
              <ul class="nav">
                 
              </ul>
-            <ul class="nav flex-column justify-content-center mt-5 border-bottom ">
+            <ul class="nav flex-column justify-content-center mt-5">
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center bg-white text-dark" href="#" data-page="home">
                         <i class="bi bi-house-door me-2 "></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-page="forums">
-                        <i class="bi bi-chat-left-text me-2 text-white"></i>live
+                    <a class="nav-link text-white" href="#" data-page="forums">
+                        <i class="bi bi-chat-left-text me-2 "></i>live
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="#" data-page="community">
+                    <a class="nav-link d-flex align-items-center text-white" href="#" data-page="community">
                         <i class="bi bi-people me-2 text-white"></i> Community
                     </a>
                 </li>
             </ul>
-            <ul class="nav flex-column mt-auto border-top">
+            <ul class="nav flex-column mt-auto position-relative" style="top:-5rem">
                 <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-question-circle me-2"></i>vous</a></li>
                 <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-calendar-event me-2"></i>login</a></li>
             </ul>
@@ -49,27 +49,46 @@
             <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container">
                     <a class="navbar-brand fs-2 ms-3 text-dark" href="#" style="font-family: 'Asap';">student-forum</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="input position-relative" style="left:10rem; width: 20vw;"><input type="search" class="form-control bg-light border-0 w-100" placeholder="Rechercher..."></div>
-                     <button type="button" class="btn btn-light d-none">button</button>
+                     <button type="button" class="btn btn-light d-lg-none d-md-block circle mx-auto">button</button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#"><button class="btn btn-dark text-white">+ nouvelle discussion</button></a>
+                                <a class="nav-link active" href="#"><button class="btn bg text-white shadow">+ nouvelle discussion</button></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         
-            <div class="mouve ms-5 mx-auto">
+            <div class="mouve ms-3 mx-auto">
             <div id="home" class="page active mt-5">
-                <h1>Bienvenue sur Student-Forum</h1>
-                <div class="card bg-dark" style="width:90% ;height:30rem;">
-                    <div class="card-title">voiture</div>
-                    <div class="card-body"></div>
+                <div class="container">
+                    <div class="presentation bg-dark position-relative bg-light rounded-5" style="height:10rem;top: -2.3rem;"><img src="ciel etoile.jpg" class="img-fluid rounded-3" alt=""></div>
+                </div>
+                <div class="container">
+                    <div class="row mx-auto">
+                        <div class="col-8 bg-danger text-center">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos excepturi asperiores quia suscipit laborum unde voluptatum corrupti neque deserunt consequatur perferendis repellendus, molestiae officia esse voluptates totam cumque deleniti numquam.
+                            Officiis temporibus cumque quidem iure minus! Odit eligendi mollitia incidunt totam, ipsa ab magnam voluptatibus at a, cupiditate ea tempora illo et culpa dignissimos assumenda maiores unde quae ipsum repellat!
+                            Ipsum necessitatibus quae, similique eligendi qui suscipit veniam vero, eos facilis minima dignissimos non in expedita, illum harum mollitia atque! Reiciendis, facere. Saepe sequi cum deserunt doloremque minima, ducimus aliquid.
+                            Ipsam aliquid hic eius neque ducimus! Necessitatibus debitis sequi explicabo a odit esse sapiente porro fugiat dignissimos rerum corporis minus molestias quis recusandae doloribus, tempora vero, quam incidunt molestiae! Asperiores.
+                            Ratione optio enim, mollitia quae expedita eligendi quasi excepturi consequuntur ea, reiciendis, consequatur ad explicabo distinctio illo reprehenderit quod eaque veritatis minus deleniti labore magni debitis. Libero, vel quam! Dignissimos!
+                            Veritatis iusto quos omnis expedita iure maxime cum eius nesciunt amet vel molestias, quis natus fugiat deserunt laboriosam in. Temporibus, nam itaque! Neque recusandae minus quam soluta sequi, temporibus error!
+                            Debitis ullam quibusdam tempora rerum, saepe perferendis quod blanditiis dolor, eius incidunt esse nulla officia accusantium distinctio molestias labore laboriosam eligendi. Vitae tempore possimus labore, minus ullam aliquid dolore omnis!
+                            Quod quos assumenda deserunt id eum! Expedita deleniti distinctio perspiciatis dolorem aliquam mollitia corporis, eligendi harum reiciendis hic. Mollitia, est! Aut voluptatem ipsum similique quis nesciunt libero neque aspernatur voluptatum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque enim dolores quis velit cupiditate ipsa, sapiente rerum beatae amet voluptatem distinctio nostrum id ducimus reiciendis neque quaerat accusamus eius molestias.
+                            Ullam dolorum dolores eligendi sit inventore illum, alias deserunt illo officiis ex corrupti in aperiam sint. Quo distinctio rem quidem nemo nam magni tenetur nostrum voluptatibus sequi! Iste, a deleniti!
+                            Ipsa rerum non saepe aperiam, quam soluta ratione fugit voluptates obcaecati officiis, optio quod eaque facilis repellendus corrupti esse odit exercitationem nesciunt debitis at veniam! Facilis assumenda eos atque impedit!
+                            Accusantium odit, quas expedita temporibus voluptatum vel eum esse, blanditiis eligendi iure fugiat sunt facilis numquam ipsam quia animi dicta error molestiae pariatur aliquid recusandae necessitatibus ad? Doloremque, quo iure?
+                            Nisi natus quo quisquam id? Illo, quasi quo voluptates adipisci magni iure, ratione eum natus voluptate esse quisquam officia architecto sed! Delectus commodi mollitia facilis nisi unde repellendus ipsam dolorem.
+                            Deleniti ratione optio reiciendis quae fuga nemo minus dolor exercitationem odit. Consequatur voluptas obcaecati, iusto repellat fugit optio dolore autem non soluta reprehenderit neque et unde velit suscipit molestias ipsum?
+                            </div>
+                        <div class="col bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptatem ex facere enim veritatis non eum, dolorum, dolores quos quia eaque! Tempora quas quam mollitia fuga vitae laboriosam voluptas eligendi!</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +104,7 @@
                 <h1>Community</h1>
                 <p>Contenu de la communauté...</p>
             </div>
-            <div id="help" class="page" style="display: none;">
+            <div id="vous" class="page" style="display: none;">
                 <h1>Help Center</h1>
                 <p>Contenu du centre d'aide...</p>
             </div>
