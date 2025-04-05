@@ -1,6 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .sidebar, .bg{
     background-color:#5d5d6c;
 }
+
 .logo {
     height: 30px;
     width: auto;
