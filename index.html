@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Asap:ital,wght@0,100..900;1,100..900&family=Bangers&family=Caveat:wght@400..700&family=Merienda:wght@300..900&family=Monomakh&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
-<body>
+<body id="vel">
     <div class="d-flex">
-        <nav class="sidebar  sticky-top  vh-100 d-flex flex-column  px-5 text-white" id="sidebar">
+        <nav class="menu  sticky-top  vh-100 d-flex flex-column  px-5 text-white" id="menu-right">
             <a class="navbar-brand fs-5 mt-4" href="#" style="transform: translate(-10px);">
             <input type="text" class="form-control" placeholder="Rechercher...">
             </a>
@@ -39,9 +40,7 @@
                 <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-question-circle me-2"></i>vous</a></li>
                 <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-calendar-event me-2"></i>login</a></li>
             </ul>
-
         </nav>
-
         <div class="content w-100">
             <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container-fluid">
@@ -50,46 +49,50 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
                         <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg></button>
-                    <div class="input position-relative" style="left:5rem;"><input type="search" style="width: 20vw;" class="form-control bg-light border-0" placeholder="Rechercher..." aria-label="Rechercher"></div>
-                    <button class="navbar-toggler ms-auto "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <ul class="nav mx-auto input" style="left:5rem;" id="input-search"><li class="nav-item"><input type="search" style="width: 20vw;" class="form-control bg-light border-0" placeholder="Rechercher..." aria-label="Rechercher"></li></ul>
+                    <button type="button" class="btn btn-dark text-white me-5"  id="toggle-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
+                        <title>moon</title>
+                        <path d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z"/>
+                        </svg></button>
+                    <ul class="nav">
+                        <li class="nav-item"><button class="btn bg text-white" id="ret">+ discussion</button></li>
+                    </ul>
+                    <button class="navbar-toggler ms-auto "  type="button" data-bs-toogle="collapse" data-bs-target="menu" id="navbar-toggler">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#"><button class="btn bg text-white shadow">+ nouvelle discussion</button></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </nav>
             <div id="home" class="page active mt-5">
                 <div class="container-fluid">
                     <div class="presentation bg-dark position-relative bg-light rounded-5 sticky-top " style="height:10rem;top: -2.3rem;"><img src="ciel etoile.jpg" class="img-fluid rounded-3" alt=""></div>
+                    <div class="container-fluid">
+                        <div class="row bg-dark">
+                            <div class="col ms-auto text-white text-end" id="sot"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit rem aut, corporis et nulla odio architecto voluptatum modi, illo saepe corrupti perferendis, inventore maxime voluptatibus eos quas ea vero.</div>
+                        </div>
+                    </div>
                     <div class="row mx-auto">
-                        <div class="col-8  col-lg-8 col-md-6 col-sm-3 bg-danger text-center">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos excepturi asperiores quia suscipit laborum unde voluptatum corrupti neque deserunt consequatur perferendis repellendus, molestiae officia esse voluptates totam cumque deleniti numquam.
-                            Officiis temporibus cumque quidem iure minus! Odit eligendi mollitia incidunt totam, ipsa ab magnam voluptatibus at a, cupiditate ea tempora illo et culpa dignissimos assumenda maiores unde quae ipsum repellat!
-                            Ipsum necessitatibus quae, similique eligendi qui suscipit veniam vero, eos facilis minima dignissimos non in expedita, illum harum mollitia atque! Reiciendis, facere. Saepe sequi cum deserunt doloremque minima, ducimus aliquid.
-                            Ipsam aliquid hic eius neque ducimus! Necessitatibus debitis sequi explicabo a odit esse sapiente porro fugiat dignissimos rerum corporis minus molestias quis recusandae doloribus, tempora vero, quam incidunt molestiae! Asperiores.
-                            Ratione optio enim, mollitia quae expedita eligendi quasi excepturi consequuntur ea, reiciendis, consequatur ad explicabo distinctio illo reprehenderit quod eaque veritatis minus deleniti labore magni debitis. Libero, vel quam! Dignissimos!
-                            Veritatis iusto quos omnis expedita iure maxime cum eius nesciunt amet vel molestias, quis natus fugiat deserunt laboriosam in. Temporibus, nam itaque! Neque recusandae minus quam soluta sequi, temporibus error!
-                            Debitis ullam quibusdam tempora rerum, saepe perferendis quod blanditiis dolor, eius incidunt esse nulla officia accusantium distinctio molestias labore laboriosam eligendi. Vitae tempore possimus labore, minus ullam aliquid dolore omnis!
-                            Quod quos assumenda deserunt id eum! Expedita deleniti distinctio perspiciatis dolorem aliquam mollitia corporis, eligendi harum reiciendis hic. Mollitia, est! Aut voluptatem ipsum similique quis nesciunt libero neque aspernatur voluptatum!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque enim dolores quis velit cupiditate ipsa, sapiente rerum beatae amet voluptatem distinctio nostrum id ducimus reiciendis neque quaerat accusamus eius molestias.
-                            Ullam dolorum dolores eligendi sit inventore illum, alias deserunt illo officiis ex corrupti in aperiam sint. Quo distinctio rem quidem nemo nam magni tenetur nostrum voluptatibus sequi! Iste, a deleniti!
-                            Ipsa rerum non saepe aperiam, quam soluta ratione fugit voluptates obcaecati officiis, optio quod eaque facilis repellendus corrupti esse odit exercitationem nesciunt debitis at veniam! Facilis assumenda eos atque impedit!
-                            Accusantium odit, quas expedita temporibus voluptatum vel eum esse, blanditiis eligendi iure fugiat sunt facilis numquam ipsam quia animi dicta error molestiae pariatur aliquid recusandae necessitatibus ad? Doloremque, quo iure?
-                            Nisi natus quo quisquam id? Illo, quasi quo voluptates adipisci magni iure, ratione eum natus voluptate esse quisquam officia architecto sed! Delectus commodi mollitia facilis nisi unde repellendus ipsam dolorem.
-                            Deleniti ratione optio reiciendis quae fuga nemo minus dolor exercitationem odit. Consequatur voluptas obcaecati, iusto repellat fugit optio dolore autem non soluta reprehenderit neque et unde velit suscipit molestias ipsum?
+                        <div class="col-8  col-lg-8 col-md-6 col-sm-9  text-center">
+                            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                                <div class="splide__track">
+                                      <ul class="splide__list">
+                                          <li class="splide__slide"><video src="A Silent Voice - Official Trailer.mp4"  class="rounded" autoplay loop muted></video></li>
+                                          <li class="splide__slide"><video src="A Certain Scientific Railgun T - Opening (HD).mp4" alt=""  autoplay loop muted></video></li>
+                                          <li class="splide__slide"><video src="Alya Sometimes Hides Her Feelings in Russian - OFFICIAL TRAILER.mp4" alt="" autoplay loop muted></video></li>
+                                      </ul>
+                                </div>
+                              </div>
                             </div>
-                        <div class="col bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptatem ex facere enim veritatis non eum, dolorum, dolores quos quia eaque! Tempora quas quam mollitia fuga vitae laboriosam voluptas eligendi!</div>
+                        <div class="col bg-warning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus repellat numquam reprehenderit rerum, debitis voluptatem saepe inventore ut praesentium dicta corrupti, maxime asperiores? Deserunt, perferendis? Cum placeat dolores quisquam!
+                        Eveniet, eum, libero iusto laboriosam voluptates expedita repellendus tempore obcaecati sint nam sapiente repudiandae cumque? Velit commodi assumenda magni alias ipsa delectus repudiandae rerum, provident maiores quod tempore quos iusto.
+                        Ipsa quidem fuga odio sit, autem deserunt at quibusdam laudantium quae similique sed temporibus suscipit. Quas voluptas itaque aut sed, adipisci amet. Earum ipsum modi minus molestias quae consectetur praesentium.
+                        Esse quibusdam, quos dignissimos consequatur mollitia corrupti quisquam maxime consectetur nesciunt accusamus molestias, placeat in voluptatum provident est iusto et atque vitae aperiam veniam quasi rerum? Temporibus provident nihil obcaecati.
+                        Molestias laborum ad quos eos, tempora in, quaerat amet provident adipisci repellendus blanditiis nulla neque fuga ea tempore. Repellat cupiditate quam perspiciatis reprehenderit nesciunt? Cumque perspiciatis numquam laborum fuga pariatur!
+                        Accusantium, voluptatibus. Fugit quaerat similique impedit pariatur tempore numquam, ex voluptatum ut molestias adipisci porro vel atque harum, earum, sit sapiente minus ducimus natus. Voluptates laudantium totam nulla aut officiis!</div>
                     </div>
                 </div>
             </div>
-        </div>
             <div id="forums" class="page" style="display: none;">
-                <h1>Forums</h1>
+                <h1>live</h1>
                 <p>Contenu des forums...</p>
             </div>
             <div id="meetings" class="page" style="display: none;">
@@ -104,11 +107,29 @@
                 <h1>Help Center</h1>
                 <p>Contenu du centre d'aide...</p>
             </div>
-        </div>
-    </div>
-    </div>
+            </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('.splide', {
+      width:'100%',
+      height: '100%',
+      start:1,
+      perPage: 1,
+      snap: true,
+      type:"loop",
+      autoplay:true,
+      interval:2000,
+      gap:'0px',
+      arrows:true,
+      pagination:true,
+    });
 
+    splide.mount();
+});
+</script>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

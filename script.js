@@ -28,29 +28,38 @@ navLinks.forEach(link => {
         document.getElementById(pageId).style.display = 'block';
         link.classList.add('active');
 
-        // Ferme le menu hamburger si ouvert (en mode responsive)
-        if (window.innerWidth <= 991.98) {
-            sidebar.classList.remove('show');
-        }
     });
 });
 
-document.getElementById('monBouton').addEventListener('click', function() {
-    window.location.href = 'authentification.html';
-});
-
-document.getElementById('newDiscussionBtn').addEventListener('click', function() {
-    alert("Nouvelle discussion cliquée!"); // Remplacez par votre logique
-});
-
-// Gestion du menu hamburger (responsive)
-document.querySelector('.navbar-toggler').addEventListener('click', function() {
-    sidebar.classList.toggle('show');
-});
-// lien du buton 
-document.getElementById('monBouton').addEventListener('click', function() {
-  window.location.href = 'authentification.html'; 
-});
 
 
+    //dark mode 
 
+    let bouton = document.getElementById("toggle-dark");
+    let body = document.body;
+    let navbar = document.getElementById("menu")
+    bouton.addEventListener("click", function() {
+      body.classList.toggle('dark-mode');
+     });
+
+    
+    // changement de container du bouton a moins 998px
+    /*
+     function lets(){
+
+     let bouton = document.getElementById('ret')
+     let change = document.getElementById('sot')
+     let returne = document.getElementById('input-search')
+    if(window.innerWidth <998.85){
+    change.appendChild(bouton)
+    }else{
+     returne.appendChild(bouton)
+    }
+    console.log('Après changement:', document.body.classList);
+    }
+
+    lets()
+    
+    window.addEventListener('resize', lets);
+  
+    */
