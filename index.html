@@ -17,28 +17,28 @@
     <div class="d-flex">
         <nav class="menu  sticky-top  vh-100 d-flex flex-column  px-5 text-white" id="menu-right">
             <a class="navbar-brand fs-5 mt-4" href="#" style="transform: translate(-10px);">
-            <input type="text" class="form-control" placeholder="Rechercher...">
+            <input type="text" class="form-control" placeholder="Rechercher..." id="search">
             </a>
             <ul class="nav flex-column justify-content-center mt-5">
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center bg-white text-dark" href="#" data-page="home">
-                        <i class="bi bi-house-door me-2 "></i> Home
+                    <a class="nav-link nav-select d-flex align-items-center bg-white text-dark" href="#" data-page="home" id="tab-1">
+                        <i class="bi bi-house-door me-2 "></i> Accueil
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#" data-page="forums">
-                        <i class="bi bi-chat-left-text me-2 "></i>live
+                    <a class="nav-link nav-select text-white" href="#" data-page="forums" id="tab-2">
+                        <i class="bi bi-chat-left-text me-2"></i>live
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center text-white" href="#" data-page="community">
-                        <i class="bi bi-people me-2 text-white"></i> Community
+                    <a class="nav-link nav-select d-flex align-items-center text-white" href="#" data-page="community" id="tab-3">
+                        <i class="bi bi-people me-2 text-white"></i> communaute
                     </a>
                 </li>
             </ul>
             <ul class="nav flex-column mt-auto position-relative" style="top:-5rem">
                 <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-question-circle me-2"></i>vous</a></li>
-                <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-calendar-event me-2"></i>login</a></li>
+                <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-calendar-event me-2"></i>se connecter</a></li>
             </ul>
         </nav>
         <div class="content w-100">
@@ -50,24 +50,54 @@
                         <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg></button>
                     <ul class="nav mx-auto input" style="left:5rem;" id="input-search"><li class="nav-item"><input type="search" style="width: 20vw;" class="form-control bg-light border-0" placeholder="Rechercher..." aria-label="Rechercher"></li></ul>
-                    <button type="button" class="btn btn-dark text-white me-5"  id="toggle-dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1">
+                    <button type="button" class="btn btn-dark text-white me-5 btn-circle" id="toggle-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="20px" height="20px" viewBox="0 0 32 32" version="1.1">
                         <title>moon</title>
                         <path d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z"/>
-                        </svg></button>
+                        </svg>
+                    </button>
                     <ul class="nav">
                         <li class="nav-item"><button class="btn bg text-white" id="ret">+ discussion</button></li>
                     </ul>
-                    <button class="navbar-toggler ms-auto "  type="button" data-bs-toogle="collapse" data-bs-target="menu" id="navbar-toggler">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                     <button class="ms-auto d-lg-none d-md-block" id="navbar-toggler">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
+                            <title>Menu</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Menu">
+                                    <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24">
+                        
+                        </rect>
+                                    <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round">
+                        
+                        </line>
+                                    <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round">
+                        
+                        </line>
+                                    <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round">
+                        
+                        </line>
+                                </g>
+                            </g>
+                        </svg>
+                     </button>
             </nav>
             <div id="home" class="page active mt-5">
                 <div class="container-fluid">
                     <div class="presentation bg-dark position-relative bg-light rounded-5 sticky-top " style="height:10rem;top: -2.3rem;"><img src="ciel etoile.jpg" class="img-fluid rounded-3" alt=""></div>
                     <div class="container-fluid">
-                        <div class="row bg-dark">
-                            <div class="col ms-auto text-white text-end" id="sot"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit rem aut, corporis et nulla odio architecto voluptatum modi, illo saepe corrupti perferendis, inventore maxime voluptatibus eos quas ea vero.</div>
+                        <div class="row bg-warning text-dark">
+                            <div class="col ms-auto text-end">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim quaerat alias iure libero molestias deserunt? Rem, distinctio architecto! Nam delectus dolor voluptatem veritatis nulla dolorem sit quae sunt error?
+                                Minima neque itaque blanditiis recusandae illo, laboriosam nisi sed nulla ab aperiam deleniti temporibus dolores labore est voluptatum veniam ad dolore mollitia eligendi nostrum in rerum corrupti consectetur libero. Incidunt!
+                                Nulla, nihil sequi commodi laudantium voluptatem culpa, voluptates, natus saepe hic doloribus sunt recusandae ab atque? Eius accusantium illo pariatur, ad, rerum cupiditate inventore veniam vel, minima architecto iusto voluptas?
+                                Tempore dolorem rerum at a blanditiis quis eligendi ducimus error eaque cum iure voluptates placeat itaque natus architecto sed nostrum nulla asperiores non, temporibus aliquid. Deserunt placeat dicta eos voluptates!
+                                Molestiae eos soluta illo hic totam qui, ea commodi molestias amet iusto excepturi est obcaecati aspernatur maiores corrupti delectus aliquid voluptas quaerat illum minima autem exercitationem nulla quam dolorum! Beatae!
+                                Quaerat veniam, rem quia deserunt sint eos, corrupti officia laborum unde qui tempora assumenda. Dolore inventore cupiditate necessitatibus similique iusto eaque quasi deleniti quas, nesciunt, corporis impedit dignissimos aliquid sapiente.
+                                Earum ipsum quaerat, voluptas pariatur rem, iste dolores repudiandae aliquid tempore nemo voluptatem neque corrupti saepe sequi. Adipisci deserunt nihil optio vitae accusamus! Consectetur vero consequatur, fuga a adipisci corporis.
+                                Alias impedit animi reprehenderit omnis molestias officia natus ducimus rerum ullam illo sequi tempore perspiciatis ad, labore, eos ut illum laudantium, pariatur quibusdam. Iste, totam. Officia officiis fugiat voluptatibus minima.
+                                Beatae quo nulla nisi quaerat porro repellendus amet rem dolor magni omnis vel officia itaque aspernatur dignissimos explicabo ipsum inventore sed distinctio architecto soluta rerum, doloribus libero ab! Facere, iure.
+                                Consequuntur maxime reiciendis quaerat laborum eum aliquam molestiae similique enim sint. Odio delectus natus dicta. Dicta placeat cupiditate optio quos voluptatem asperiores tempore iste eum laudantium! Placeat fuga odio iure!</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row mx-auto">

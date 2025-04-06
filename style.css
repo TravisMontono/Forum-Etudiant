@@ -15,8 +15,8 @@ body{
 
 body.dark-mode {
     background-color: #121212;
-    color:var(--primary-color);
-    transition: color 0.6s ease-in;
+    color:var(--primary-color)!important;
+    transition: color 0.6s ease-out;
 }
 
 body.dark-mode button {
@@ -28,6 +28,11 @@ body.dark-mode .menu{
     background-color: var(--primary-color);
 }
 
+body.dark-mode  p{
+    color:var(--primary-color)!important;
+    transition: color 0.6s ease-out;
+}
+
 body.dark-mode .nav-link, body.dark-mode .nav-link i{
     color: black!important;
 }
@@ -36,11 +41,9 @@ body.dark-mode .nav-link, body.dark-mode .nav-link i{
     background-color:#5d5d6c;
 }
 
-.logo {
-    height: 30px;
-    width: auto;
+#search.point{
+    pointer-events: none;
 }
-
 .none{
     display: none;
 }
@@ -72,11 +75,6 @@ shadow{
     color: #007bff;
 }
 
-.form-control:hover {
-    cursor: pointer;
-    border: 2px solid blue;
-}
-
 .form-control {
     padding-left: 30px;
     background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/icons/search.svg');
@@ -101,11 +99,13 @@ shadow{
 /* Styles pour le menu hamburger (responsive) */
 @media only screen  and (max-width: 991.98px) {
     .menu {
-      display: none!important;
+      position: fixed;
+      left:-360px;
       z-index: 8000;
     } 
     .menu.active {
-       display: block!important;
+       left:0;
+       transition: left 0.6s ease;
     }
 }
 
