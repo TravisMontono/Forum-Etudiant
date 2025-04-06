@@ -13,6 +13,10 @@ body{
     background-color:var(--primary-color);
 }
 
+html.dis{
+    background-color: #007bff;
+    backdrop-filter: blur(0.5);
+}
 body.dark-mode {
     background-color: #121212;
     color:var(--primary-color)!important;

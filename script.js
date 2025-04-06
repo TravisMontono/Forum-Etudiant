@@ -67,20 +67,24 @@ tab_3.addEventListener("click", function () {
   input_search.style.cursor = "text";
 });
 
+// faire appraitre le menu sur des taille inferieur
+
 let bouton = document.getElementById('navbar-toggler')
 let menu = document.getElementById('menu-right')
+let body = document.body
 
 bouton.addEventListener("click", function(){
      menu.classList.toggle('active')
+     body.classList.toggle('dis')
 })
 
-/*
+
 let nav_links = document.querySelectorAll('.nav-link')
 let menu_remove = document.getElementById('menu-right');
  nav_links.addEventListener("click", function(){
     menu_remove.classList.remove('active')
  })
-*/
+
 
 // changement de container du bouton a moins 998px
 /*
