@@ -22,7 +22,7 @@ body {
 }
 
 .logo {
-    width: 110px;
+    width: 100px;
     margin-bottom: 10px;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 .submit {
-    background-color: #9370DB;
+    background-color: #007bff;
     color: #fff;
     padding: 10px;
     border: none;
