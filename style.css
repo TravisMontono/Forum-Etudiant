@@ -1,82 +1,77 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+body::-webkit-scrollbar-thumb
+{
+  background: #888; /* Couleur du pouce */
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Couleur de la barre de défilement */
+}
+.logo {
+    height: 37px;
+    width: auto;
+}
+.bg-gold
+{
+    background-color: #F5F5F5;
+}
+.bg-tech
+{
+    background-color: #E0E0E0;
+}
+.bg-btn
+{
+    background-color: #9370DB;
+}
+.bg-btn1
+{
+     background-color: #9370DB;
+     margin-top: 10px;
+     border:none;
+}
+.navbar-brand {
+    color: #9370DB;
 }
 
-/* style dark-mode */
-:root{
-    --primary-color:white;
+.sidebar {
+    height: calc(110vh - -50px);
 }
 
-body{
-    background-color:var(--primary-color);
-}
-
-html.dis{
-    background-color: #007bff;
-    backdrop-filter: blur(0.5);
-}
-body.dark-mode {
-    background-color: #121212;
-    color:var(--primary-color)!important;
-    transition: color 0.6s ease-out;
-}
-
-body.dark-mode button {
-    background-color:var(--primary-color);
-    color: black!important;
-}
-
-body.dark-mode .menu{
-    background-color: var(--primary-color);
-}
-
-body.dark-mode  p{
-    color:var(--primary-color)!important;
-    transition: color 0.6s ease-out;
-}
-
-body.dark-mode .nav-link, body.dark-mode .nav-link i{
-    color: black!important;
-}
-
-.menu, .bg{
-    background-color:#5d5d6c;
-}
-
-#search.point{
-    pointer-events: none;
-}
-.none{
-    display: none;
-}
-
-.presentation img , .splide__slide video{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
- 
-shadow{
-    box-shadow: 0 0 12px rgba(227, 240, 252, 1);
-}
 .nav-link {
-    font-size: 16px;
-    color: #333;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
     transition: color 0.3s ease;
     padding: 3;
-    margin-left: -25px;
+    margin-left: -5px;
+    margin-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link i {
-    font-size: 18px;
+    font-size: 19px;
     color: inherit;
     padding-left: 0;
 }
 
-.nav-link a:hover {
-    color: #007bff;
+.nav-link:hover {
+    color: whitesmoke;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 7px;
+    transition: 0.9s;
+    
+}
+
+.form-control:hover {
+    cursor: pointer;
+    border: 2px solid blue;
 }
 
 .form-control {
@@ -99,32 +94,271 @@ shadow{
     display: block;
 }
 
+.scrollable-content {
+    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+    max-height: calc(100vh - 8px);/* Ajustez cette valeur en fonction de la hauteur de votre contenu */
+  
+}
+.scrollable-content::-webkit-scrollbar-thumb
+{
+      background-color: transparent;
+}
 
-/* Styles pour le menu hamburger (responsive) */
-@media only screen  and (max-width: 991.98px) {
-    .menu {
-      position: fixed;
-      left:-360px;
-      z-index: 8000;
-    } 
-    .menu.active {
-       left:0;
-       transition: left 0.6s ease;
+
+/* Responsive Styles */@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 56px;
+        left: -250px;
+        width: 250px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        height: 100vh;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    .search-item, .login-item {
+        display: block;
+    }
+
+    .mobile-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .mobile-buttons button {
+        flex: 1;
+        margin: 0 5px;
+    }
+
+    .mobile-buttons button:first-child {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .mobile-buttons button:last-child {
+        background-color: #e0e0e0;
+        color: #333;
+    }
+    .titre, .top_comment {
+        flex: 1 0 100%; /* Prend toute la largeur sur les petits écrans */
+    }
+
+    .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  left: 70%;
+  top: 2.2em;
+  width: 4em;
+  height: 2.2em;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
     }
 }
 
-/* disparition du champ  de recherche droite remplacer par un button*/
-@media only screen  and (max-width:576px) {
-    .input{
-         display: none;
-    }
-    input .search{
-        display: block;
-        width: 400px;
-    }
-    .none{
-        display: block;
-    }
+
+
+
+
+
+
+
+
+.new-discussion-btn {
+    display: none;
 }
 
-/* tu dois faire un code en javascript pour faire appraitre le champ de recherche quand tu appuie surr le button*/
+p
+{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/*div de la page home*/
+
+.main_container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.titre, .top_comment
+{
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.titre
+{
+    background-color: #f0f8ff;
+    flex: 2;
+    border-right: 9px solid white;
+    border-radius: 20px;
+}
+.top_comment
+{
+    background-color: #e6e6fa;
+    flex: 1;
+    border-radius: 20px;
+}
+.top_comment h2
+{
+    font-weight: bold;
+}
+.titre h1
+{
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.titre p
+{
+    font-size: 1.1em;
+    font-size: 13px;
+}
+
+
+
+
+
+/*Css du bouton de darkmode */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2.2em;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+
+
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2a2a;
+  transition: 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 20px;
+  left: 0.5em;
+  bottom: 0.5em;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+  box-shadow: inset 8px -4px 0px 0px #fff;
+}
+
+.switch input:checked + .slider {
+  background-color: #00a6ff;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.8em);
+  box-shadow: inset 15px -4px 0px 15px #ffcf48;
+}
+
+.star {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 5px;
+  transition: all 0.4s;
+  height: 5px;
+}
+
+.star_1 {
+  left: 2.5em;
+  top: 0.5em;
+}
+
+.star_2 {
+  left: 2.2em;
+  top: 1.2em;
+}
+
+.star_3 {
+  left: 3em;
+  top: 0.9em;
+}
+
+.switch input:checked ~ .slider .star {
+  opacity: 0;
+}
+
+.cloud {
+  width: 3.5em;
+  position: absolute;
+  bottom: -1.4em;
+  left: -1.1em;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.switch input:checked ~ .slider .cloud {
+  opacity: 1;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+body.dark-mode .navbar
+{
+  background-color: black;
+  color: white;
+}
+body.dark-mode .sidebar
+{
+    background-color: black;
+    color: white;
+}
+
+
+.carousel-item img {
+    height: 300px; /* Ajustez la hauteur des images */
+    object-fit: cover; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    border-radius: 20px;
+}
