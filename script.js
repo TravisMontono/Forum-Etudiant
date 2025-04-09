@@ -79,11 +79,10 @@ bouton.addEventListener("click", function(){
      body.classList.toggle('menu-open')
 })
 
-document.addEventListener("click", function(event) {
-  console.log(event.target);
-});
-
-
+let bouton_input = document.getElementById('bouton-input')
+bouton.addEventListener("click", function(){
+       bouton_input.classList.toggle('btn-none')
+})
 // desactivation du menu verticale gauche si l'utilisateur clique sur un onglet sur mobile
 
 let nav_links = document.querySelectorAll('.nav-link')
@@ -95,8 +94,36 @@ let menu_remove = document.getElementById('menu-right');
     menu_remove.classList.remove('drop')
   })
  })
-    
- let connect = document.querySelector('.connect')
- connect.addEventListener("click", function(){
-     window.location.href="authentification.html"
+
+ let paragraph = document.querySelectorAll(".paragraph");
+ paragraph.forEach(function(paragraphs){
+  let bouton_retry = document.createElement('button')
+  bouton_retry.textContent="..."
+  bouton_retry.style.color='white'
+  bouton_retry.style.border="none"
+  bouton_retry.style.backgroundColor="transparent"
+  bouton_retry.style.fontSize="30px"
+  let texte = paragraphs.textContent;
+  let sauvegarde = texte
+  console.log(sauvegarde.length)
+  
+  let extrait = texte.substring(0,50);
+
+if(texte.length>=50){
+  let span = document.createElement('span');
+  span.textContent= extrait
+  paragraphs.textContent = '';
+  paragraphs.appendChild(span)
+  paragraphs.appendChild(bouton_retry);
+}else{
+    paragraphs.textContent= sauvegarde 
+}
+
+bouton_retry.addEventListener("click", function(){
+     window.location.href="authentification"
+})
+
  })
+// On récupère d'abord son texte
+
+

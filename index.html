@@ -15,13 +15,12 @@
 </head>
 <body>
     <div class="d-flex">
-        <nav class="menu  sticky-top  vh-100 d-flex flex-column bg-btn px-5 text-white" id="menu-right">
+        <nav class="menu  sticky-top  vh-100 d-flex flex-column text-white px-5 py-3" id="menu-right" >
             <a class="navbar-brand fs-5 mt-4" href="#" style="transform: translate(-10px);">
-            <input type="text" class="form-control" placeholder="Rechercher..." id="search">
             </a>
-            <ul class="nav flex-column justify-content-center mt-5">
+            <ul class="nav flex-column justify-content-center mt-5 border-bottom">
                 <li class="nav-item">
-                    <a class="nav-link nav-select d-flex align-items-center  text-white" href="#" data-page="home" id="tab-1">
+                    <a class="nav-link  d-flex align-items-center bg-warning border-left active-menu" href="#" data-page="home" id="tab-1">
                         <i class="bi bi-house-door me-2 "></i> Accueil
                     </a>
                 </li>
@@ -31,13 +30,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-select d-flex align-items-center text-white" href="#" data-page="community" id="tab-3">
-                        <i class="bi bi-people me-2 text-white"></i> communaute
+                    <a class="nav-link nav-select d-flex align-items-center" href="#" data-page="community" id="tab-3">
+                        <i class="bi bi-people me-2"></i> communaute
                     </a>
                 </li>
             </ul>
-             <div class="collapse" id="mon">
-            <ul class="nav flex-column" id="demo">
+            <ul class="nav flex-column border-bottom">
             <li class="nav-item mt-5">
                 <a class="nav-link d-flex align-items-center text-white" href="#" data-page="Mathématiques">
                     <i class="bi bi-calculator me-2"></i> Mathématiques
@@ -54,21 +52,22 @@
                 </a>
             </li>
         </ul>
-       </div>
-            <ul class="nav flex-column mt-auto position-relative" style="top:-5rem">
+            <ul class="nav flex-column position-relative mt-5">
                 <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-question-circle me-2"></i>vous</a></li>
                 <li class="nav-item"><a href="authentification.html" class="nav-link text-white connect"><i class="bi bi-calendar-event me-2"></i>se connecter</a></li>
             </ul>
         </nav>
-        <div class="content w-100 blur">
-            <nav class="navbar navbar-expand-lg bg-white">
+        <div class="content w-100 blur flex-grow-1">
+            <nav class="navbar navbar-expand-lg" id="menu-left">
                 <div class="container-fluid">
-                    <a class="navbar-brand fs-2 ms-3 text-dark" href="#" style="font-family: 'Asap';">student-forum</a>
-                    <button class="btn btn-light btn-circle mx-auto none">
+                    <a class="navbar-brand nav-font fs-2 ms-3" href="#" style="color: black;">student-forum</a>
+                    <button class="btn btn-light btn-circle mx-auto none" id="bouton-input">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
                         <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg></button>
-                    <ul class="nav mx-auto input" style="left:5rem;" id="input-search"><li class="nav-item"><input type="search" style="width: 20vw;" class="form-control bg-light border-0" placeholder="Rechercher..." aria-label="Rechercher"></li></ul>
+                    <ul class="nav mx-auto input" style="left:5rem;" id="input-search"><li class="nav-item"><input type="search" style="width: 20vw;" class="form-control bg-input border-0" placeholder="Rechercher..." aria-label="Rechercher"></li>
+                    </ul>
+                    <div class="d-flex me-auto">
                     <button type="button" class="btn btn-white border text-white me-5 btn-circle" id="toggle-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#fff" width="20px" height="20px" viewBox="0 0 32 32" version="1.1">
                         <title>moon</title>
@@ -76,7 +75,8 @@
                         </svg>
                     </button>
                     <ul class="nav">
-                        <li class="nav-item"><button class="btn bg-btn text-white btn-none" id="ret">+ discussion</button></li>
+                        <li class="nav-item"><button class="btn btn-warning text-white btn-none" id="ret">+ discussion</button></li>
+                    </div>
                     </ul>
                      <button class="ms-auto d-lg-none d-md-block open-menu" id="navbar-toggler">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
@@ -102,44 +102,111 @@
             </nav>
             <div id="home" class="page active mt-5">
                 <div class="container-fluid">
-                    <div class="presentation bg-dark position-relative bg-light rounded-5 sticky-top " style="height:10rem;top: -2.3rem;"><img src="ciel etoile.jpg" class="img-fluid rounded-3" alt=""></div>
-                    <div class="container-fluid">
-                        <div class="row bg-warning text-dark">
-                            <div class="col ms-auto text-end">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim quaerat alias iure libero molestias deserunt? Rem, distinctio architecto! Nam delectus dolor voluptatem veritatis nulla dolorem sit quae sunt error?
-                                Minima neque itaque blanditiis recusandae illo, laboriosam nisi sed nulla ab aperiam deleniti temporibus dolores labore est voluptatum veniam ad dolore mollitia eligendi nostrum in rerum corrupti consectetur libero. Incidunt!
-                                Nulla, nihil sequi commodi laudantium voluptatem culpa, voluptates, natus saepe hic doloribus sunt recusandae ab atque? Eius accusantium illo pariatur, ad, rerum cupiditate inventore veniam vel, minima architecto iusto voluptas?
-                                Tempore dolorem rerum at a blanditiis quis eligendi ducimus error eaque cum iure voluptates placeat itaque natus architecto sed nostrum nulla asperiores non, temporibus aliquid. Deserunt placeat dicta eos voluptates!
-                                Molestiae eos soluta illo hic totam qui, ea commodi molestias amet iusto excepturi est obcaecati aspernatur maiores corrupti delectus aliquid voluptas quaerat illum minima autem exercitationem nulla quam dolorum! Beatae!
-                                Quaerat veniam, rem quia deserunt sint eos, corrupti officia laborum unde qui tempora assumenda. Dolore inventore cupiditate necessitatibus similique iusto eaque quasi deleniti quas, nesciunt, corporis impedit dignissimos aliquid sapiente.
-                                Earum ipsum quaerat, voluptas pariatur rem, iste dolores repudiandae aliquid tempore nemo voluptatem neque corrupti saepe sequi. Adipisci deserunt nihil optio vitae accusamus! Consectetur vero consequatur, fuga a adipisci corporis.
-                                Alias impedit animi reprehenderit omnis molestias officia natus ducimus rerum ullam illo sequi tempore perspiciatis ad, labore, eos ut illum laudantium, pariatur quibusdam. Iste, totam. Officia officiis fugiat voluptatibus minima.
-                                Beatae quo nulla nisi quaerat porro repellendus amet rem dolor magni omnis vel officia itaque aspernatur dignissimos explicabo ipsum inventore sed distinctio architecto soluta rerum, doloribus libero ab! Facere, iure.
-                                Consequuntur maxime reiciendis quaerat laborum eum aliquam molestiae similique enim sint. Odio delectus natus dicta. Dicta placeat cupiditate optio quos voluptatem asperiores tempore iste eum laudantium! Placeat fuga odio iure!</p>
-                            </div>
+                    <div class="row">
+                    <div class=" col-10 d-flex flex-row gap-3" style="overflow: hidden;">
+                        <div class="slider-item flex-shrink-0 position-relative" style="width: 20rem; height:16rem; "><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img  light rounded-4" alt="">
+                         <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem; height: 100%;">
+                         <div class="d-flex gap-2">
+                         <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="rem.png"  class="img light rounded-circle" alt=""></div>
+                         <p class="text-white">esters200</p>
                         </div>
-                    </div>
-                    <div class="row mx-auto">
-                        <div class="col-8  col-lg-8 col-md-6 col-sm-9  text-center">
-                            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
-                                <div class="splide__track">
-                                      <ul class="splide__list">
-                                          <li class="splide__slide"><video src="A Silent Voice - Official Trailer.mp4"  class="rounded" autoplay loop muted></video></li>
-                                          <li class="splide__slide"><video src="A Certain Scientific Railgun T - Opening (HD).mp4" alt=""  autoplay loop muted></video></li>
-                                          <li class="splide__slide"><video src="Alya Sometimes Hides Her Feelings in Russian - OFFICIAL TRAILER.mp4" alt="" autoplay loop muted></video></li>
-                                      </ul>
-                                </div>
-                              </div>
+                        </div>
+                        <div class=" text-white mt-auto user-describe">
+                            <h6 class="text-white">les valeurs d'une meres</h6>
+                            <p class="text-white paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aliquam quam quia,</p>
+                         </div>
+                        </div>
+                        <div class="slider-item flex-shrink-0 position-relative" style="width: 20rem; height:16rem; "><img src="rem.png"  class="img light  rounded-4">
+                            <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
+                                <div class="d-flex gap-2">
+                                <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
+                                <p class="text-white">start</p>
+                               </div>
+                               </div>
+                               <div class=" text-white mt-auto user-describe">
+                                <h6 class="text-white">les valeurs d'une meres</h6>
+                                <p class="text-white paragraph">Lorem , voluptates dolodjkjckvbcvv wcvkvklvvxbxckv vkcckjxcvbccvli sjfwkbwiob dsjdkhbsdlssndgkdggbskgkhdg</p>
+                             </div>
                             </div>
-                        <div class="col bg-warning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita doloribus repellat numquam reprehenderit rerum, debitis voluptatem saepe inventore ut praesentium dicta corrupti, maxime asperiores? Deserunt, perferendis? Cum placeat dolores quisquam!
-                        Eveniet, eum, libero iusto laboriosam voluptates expedita repellendus tempore obcaecati sint nam sapiente repudiandae cumque? Velit commodi assumenda magni alias ipsa delectus repudiandae rerum, provident maiores quod tempore quos iusto.
-                        Ipsa quidem fuga odio sit, autem deserunt at quibusdam laudantium quae similique sed temporibus suscipit. Quas voluptas itaque aut sed, adipisci amet. Earum ipsum modi minus molestias quae consectetur praesentium.
-                        Esse quibusdam, quos dignissimos consequatur mollitia corrupti quisquam maxime consectetur nesciunt accusamus molestias, placeat in voluptatum provident est iusto et atque vitae aperiam veniam quasi rerum? Temporibus provident nihil obcaecati.
-                        Molestias laborum ad quos eos, tempora in, quaerat amet provident adipisci repellendus blanditiis nulla neque fuga ea tempore. Repellat cupiditate quam perspiciatis reprehenderit nesciunt? Cumque perspiciatis numquam laborum fuga pariatur!
-                        Accusantium, voluptatibus. Fugit quaerat similique impedit pariatur tempore numquam, ex voluptatum ut molestias adipisci porro vel atque harum, earum, sit sapiente minus ducimus natus. Voluptates laudantium totam nulla aut officiis!</div>
+                        <div class="slider-item flex-shrink-0 position-relative" style="width: 20rem; height:16rem; "><img src="sam1.jpg" class="img light rounded-4" alt="">
+                            <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
+                                <div class="d-flex gap-2">
+                                <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
+                                <p class="text-white">start</p>
+                               </div>
+                               </div>
+                               <div class=" text-white mt-auto user-describe">
+                                <h6 class="text-white">les valeurs d'une meres</h6>
+                                <p class="text-white paragraph">Lorem , voluptates dolodjkjckvbcvv wcvkvklvvxbxckv vkcckjxcvbccvli sjfwkbwiob</p>
+                             </div></div>
+                        <div class="slider-item flex-shrink-0 position-relative" style="width: 20rem; height:16rem; "><img src="silent voice.png"class="img light rounded-4" alt="">
+                            <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
+                                <div class="d-flex gap-2">
+                                <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
+                                <p class="text-white">start</p>
+                               </div>
+                               </div>
+                               <div class=" text-white mt-auto user-describe">
+                                <h6 class="text-white">les valeurs d'une meres</h6>
+                                <p class="text-white paragraph">Lorem , voluptates dolodjkjckvbcvv wcvkvklvvxbxckv vkcckjxcvbccvli sjfwkbwiob</p>
+                             </div></div>
+                        <div class="slider-item flex-shrink-0 position-relative" style="width: 20rem; height:16rem; "><img src="téléchargement.jpeg"class="img light rounded-4" alt="">
+                            <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
+                                <div class="d-flex gap-2">
+                                <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
+                                <p class="text-white">start</p>
+                               </div>
+                               </div>
+                               <div class=" text-white mt-auto user-describe">
+                                <h6 class="text-white">les valeurs d'une meres</h6>
+                                <p class="text-white paragraph ">Lorem , voluptates dolodjkjckvbcvv wcvkvklvvxbxckv vkcckjxcvbccvli sjfwkbwiob</p>
+                             </div></div>
+                        <div class="slider-item flex-shrink-0 position-relative" style="width: 20rem; height:16rem; "><img src="c4.jpg" class="img light rounded-4" alt="">
+                            <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
+                                <div class="d-flex gap-2">
+                                <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
+                                <p class="text-white">start</p>
+                               </div>
+                               </div>
+                               <div class=" text-white mt-auto user-describe">
+                                <h6 class="text-white">les valeurs d'une meres</h6>
+                                <p class="text-white paragraph">Lorem , voluptates dolodjkjckvbcvv wcvkvklvvxbxckv vkcckjxcvbccvli sjfwkbwiob</p>
+                             </div></div>
                     </div>
-                </div>
-            </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-8 bg-light">
+                      <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand text-white bg-warning" href="">publication</a>
+                        <button type="bouton" class="ms-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="-0.5 0 25 25" fill="none">
+                            <path d="M19 3.32001H16C14.8954 3.32001 14 4.21544 14 5.32001V8.32001C14 9.42458 14.8954 10.32 16 10.32H19C20.1046 10.32 21 9.42458 21 8.32001V5.32001C21 4.21544 20.1046 3.32001 19 3.32001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.32001H5C3.89543 3.32001 3 4.21544 3 5.32001V8.32001C3 9.42458 3.89543 10.32 5 10.32H8C9.10457 10.32 10 9.42458 10 8.32001V5.32001C10 4.21544 9.10457 3.32001 8 3.32001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 14.32H16C14.8954 14.32 14 15.2154 14 16.32V19.32C14 20.4246 14.8954 21.32 16 21.32H19C20.1046 21.32 21 20.4246 21 19.32V16.32C21 15.2154 20.1046 14.32 19 14.32Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 14.32H5C3.89543 14.32 3 15.2154 3 16.32V19.32C3 20.4246 3.89543 21.32 5 21.32H8C9.10457 21.32 10 20.4246 10 19.32V16.32C10 15.2154 9.10457 14.32 8 14.32Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                      </nav>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint temporibus ipsum dignissimos iure eveniet eum, ullam sunt odio minus, magni, quibusdam ex minima. Modi, possimus. Rem dolorem ea voluptates nemo?
+                       Quidem, aliquam. Repellat sequi tempore quos dolores, nisi, natus, aut quibusdam hic consectetur possimus suscipit cumque corrupti. Non sequi, accusantium blanditiis, omnis amet veniam fuga voluptatibus expedita quis a quisquam.
+                       Omnis cupiditate accusantium saepe quae aliquam magni minus asperiores consequuntur facere natus nulla iste explicabo provident ullam soluta incidunt odio atque porro optio, non ducimus dolorem sed in consectetur! Inventore?
+                       Libero rem voluptatem non reprehenderit sed, atque consequatur illum odio facere quos quisquam, maxime eius accusantium sint praesentium earum ipsa quaerat iure nisi porro? Soluta velit ad quidem cum architecto!
+                       Tempora accusantium atque similique laboriosam, minima maiores vero quo sequi laborum quam ex! Repudiandae sed exercitationem sint ad reprehenderit dolorum ea, numquam est sapiente dolore ipsam ab? Optio, assumenda ex.
+                       Dolores animi, asperiores officiis facere magni totam deleniti, ducimus commodi ea repellendus libero neque laborum. Inventore fuga ea asperiores ab quia quisquam vero natus ipsum rem, laboriosam fugit non fugiat?
+                       Cupiditate commodi quisquam esse natus doloremque aliquid vel omnis nihil. Consectetur incidunt saepe quae minus expedita culpa repellat corrupti. Tempora error dolorem, ipsum suscipit dicta cum repellat enim adipisci nesciunt?
+                       Blanditiis sapiente minus, quasi commodi ducimus quae pariatur dolorum rem nihil ad ipsa tempore voluptas numquam expedita vel sequi qui voluptate magni nostrum molestiae voluptatem recusandae obcaecati nam? Velit, fugit?
+                       Velit, voluptates? Ut saepe assumenda officia, dignissimos vel nam facilis repellat illo! Porro et non eius omnis quos voluptatem sit laudantium rem error. Sequi dolorem distinctio recusandae, rerum eaque voluptatem?
+                       Quas aliquid ipsa error alias dignissimos id nisi ipsam iusto quae esse dicta sint, eos cum blanditiis sapiente consequatur laboriosam? Aliquam saepe voluptates suscipit inventore, architecto nam nisi atque recusandae?
+                       Tempora harum nisi illum at illo quod sapiente fugiat minima accusamus reiciendis neque atque animi odit non perspiciatis aspernatur dolorum ratione recusandae quidem id, nulla beatae voluptatum dolore! Ea, minus.
+                       Explicabo, animi unde incidunt odio, enim consequatur adipisci minus distinctio accusamus voluptate nisi veritatis magnam quibusdam impedit commodi alias vitae pariatur quis facere quo sapiente ab. Est enim architecto necessitatibus?</p>
+                    </div>
+                    <div class="col-4 bg-light">
+                        <p>meilleurs commentaires</p>
+                    </div>
+                  </div>
+                    </div>
+                    </div>
+             </div>
             <div id="forums" class="page p-5" style="display: none;">
                 <h1>live</h1>
                 <p>Contenu des forums...</p>
