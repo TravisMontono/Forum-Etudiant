@@ -95,6 +95,7 @@ let menu_remove = document.getElementById('menu-right');
   })
  })
 
+ function  reduct(){
  let paragraph = document.querySelectorAll(".paragraph");
  paragraph.forEach(function(paragraphs){
   let bouton_retry = document.createElement('button')
@@ -124,6 +125,8 @@ bouton_retry.addEventListener("click", function(){
 })
 
  })
-// On récupère d'abord son texte
+}
+reduct()
+
 
 
