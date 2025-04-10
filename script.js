@@ -128,5 +128,15 @@ bouton_retry.addEventListener("click", function(){
 }
 reduct()
 
+let bouton_disc = document.getElementById("but")
+let compte = document.getElementById("compt")
+let like = document.getElementById("svg")
+let increment=0;
+let click = true
+bouton_disc.addEventListener("click", function(){
+  increment++
+  compte.textContent= increment
+  like.setAttribute("fill", "blue")
+})
 
 
