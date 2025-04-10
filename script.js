@@ -12,7 +12,7 @@ tabs.forEach((tab) => {
   });
 });
 
-const navLinks = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".nav-links");
 const pages = document.querySelectorAll(".page");
 const sidebar = document.getElementById("sidebar");
 
@@ -28,15 +28,27 @@ navLinks.forEach((link) => {
     link.classList.add("active");
   });
 });
+ 
 
 // dark mode
 function dark_mode() {
   let bouton = document.getElementById("toggle-dark");
   let body = document.body;
-  let navbar = document.getElementById("menu");
+  let moon = document.querySelector(".moon")
+  let sun = document.querySelector(".sun")
   bouton.addEventListener("click", function () {
     body.classList.toggle("dark-mode");
-  });
+    if (body.classList.contains("dark-mode")) {
+      moon.style.display = 'block'; 
+      sun.style.display = 'none';
+      bouton.style.backgroundColor="transparent"
+      bouton.style.border="none"
+    } else {
+      moon.style.display = 'none';  
+      sun.style.display = 'block';
+    }
+    
+  })
 }
 
 dark_mode();

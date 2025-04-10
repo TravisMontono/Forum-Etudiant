@@ -21,7 +21,7 @@ body{
     overflow-x: hidden;
 }
 body.dark-mode {
-    background-color:#0d1117;
+    background-color:black;
     color:var(--secondary-color)!important;
     transition: color 0.6s ease-out;
 }
@@ -33,7 +33,14 @@ body.dark-mode button {
 }
 
 body.dark-mode .menu,body.dark-mode .menu-left {
-    background-color:#121212!important;
+    background-color:black!important;
+}
+
+.bg-light{
+    background-color: #f8f9fa!important;
+}
+body.dark-mode .bg-light{
+  background-color: #0d1117!important;
 }
 body.dark-mode .menu-left .navbar-brand{
   color:var(--primary-color)!important;
@@ -42,11 +49,11 @@ body.dark-mode  p {
     color:#e0e0e0!important;
     transition: color 0.6s ease-out;
 }
-body.dark-mode .para{
+body.dark-mode .name-users{
     color: var(--primary-color)!important;
 }
 body.dark-mode .mode{
-    background-color:#1f1f1f!important;
+    background-color:#0d1117!important;
 }
 body.dark-mode .nav-link, body.dark-mode .nav-link i{
     color:var(--primary-color)!important;
@@ -153,15 +160,10 @@ shadow{
 .page.active {
     display: block;
 }
+
 .enjoy{
     height:2.5rem;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    right: 0;
-/* Couleur de fond pour la version sticky */
+    background-color: #f8f9fa;
 }
 
 /* Styles pour le menu hamburger (responsive) */

@@ -21,16 +21,16 @@
             <ul class="nav flex-column justify-content-center mt-5 border-bottom">
                 <li class="nav-item">
                     <a class="nav-link  d-flex align-items-center bg-warning border-left active-menu" href="#" data-page="home" id="tab-1">
-                        <i class="bi bi-house-door me-2 "></i> Accueil
+                        <i class="bi bi-house-door me-2  nav-links"></i> Accueil
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-select text-white" href="#" data-page="forums" id="tab-2">
+                    <a class="nav-link nav-links nav-select text-white" href="#" data-page="forums" id="tab-2">
                         <i class="bi bi-chat-left-text me-2"></i>live
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-select d-flex align-items-center" href="#" data-page="community" id="tab-3">
+                    <a class="nav-link nav-links nav-select d-flex align-items-center" href="#" data-page="community" id="tab-3">
                         <i class="bi bi-people me-2"></i> communaute
                     </a>
                 </li>
@@ -53,14 +53,14 @@
             </li>
         </ul>
             <ul class="nav flex-column position-relative mt-5">
-                <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-question-circle me-2"></i>vous</a></li>
-                <li class="nav-item"><a href="authentification.html" class="nav-link text-white connect"><i class="bi bi-calendar-event me-2"></i>se connecter</a></li>
+                <li class="nav-item"><a href="" class="nav-link text-white"><i class="bi bi-question-circle me-2"></i>mon compte</a></li>
+                <li class="nav-item"><a href="authentification.html" type="bouton" class="nav-link text-white"><i class="bi bi-calendar-event me-2"></i>se connecter</a></li>
             </ul>
         </nav>
         <div class="content w-100 blur flex-grow-1">
             <nav class="navbar navbar-expand-lg" id="menu-left">
                 <div class="container-fluid">
-                    <a class="navbar-brand nav-font fs-2 ms-3" href="#" id="color">student-forum</a>
+                    <a class="navbar-brand nav-font fs-2 ms-3 fs-bold" href="#" id="color">Student hub</a>
                     <button class="btn btn-light btn-circle mx-auto none" id="bouton-input">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
                         <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -69,10 +69,42 @@
                     </ul>
                     <div class="d-flex me-auto">
                     <button type="button" class="btn btn-white border text-white me-5 btn-circle" id="toggle-dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#fff" width="20px" height="20px" viewBox="0 0 32 32" version="1.1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="moon" style="display:none" fill="#000000" stroke="#fff" width="20px" height="20px" viewBox="0 0 32 32" version="1.1">
                         <title>moon</title>
                         <path d="M29.223 24.178l-0.021-0.057c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033z"/>
                         </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="sun" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 32 32" version="1.1">
+                            <g id="icomoon-ignore">
+                                <title>sun</title>
+                            </g>
+                            <path d="M16 8.010c-4.417 0-7.997 3.581-7.997 7.998 0 4.415 3.58 7.996 7.997 7.996s7.997-3.58 7.997-7.996c0-4.416-3.58-7.998-7.997-7.998zM16 22.938c-3.821 0-6.931-3.109-6.931-6.93 0-3.822 3.109-6.932 6.931-6.932s6.931 3.11 6.931 6.932c0 3.821-3.109 6.93-6.931 6.93z" fill="#000000">
+                            
+                            </path>
+                            <path d="M15.471 0.006h1.066v6.405h-1.066v-6.405z" fill="#000000">
+                            
+                            </path>
+                            <path d="M15.471 25.604h1.066v6.39h-1.066v-6.39z" fill="#000000">
+                            
+                            </path>
+                            <path d="M0.006 15.467h6.397v1.066h-6.397v-1.066z" fill="#000000">
+                            
+                            </path>
+                            <path d="M25.596 15.467h6.398v1.066h-6.398v-1.066z" fill="#000000">
+                            
+                            </path>
+                            <path d="M26.936 4.28l0.754 0.754-4.458 4.458-0.754-0.754 4.458-4.458z" fill="#000000">
+                            
+                            </path>
+                            <path d="M5.072 27.653l-0.754-0.754 4.458-4.458 0.754 0.754-4.458 4.458z" fill="#000000">
+                            
+                            </path>
+                            <path d="M5.073 4.281l4.458 4.458-0.754 0.754-4.458-4.458 0.754-0.754z" fill="#000000">
+                            
+                            </path>
+                            <path d="M26.937 27.654l-4.458-4.458 0.754-0.754 4.458 4.458-0.754 0.754z" fill="#000000">
+                            
+                            </path>
+                            </svg>
                     </button>
                     <ul class="nav">
                         <li class="nav-item"><button class="btn btn-warning text-white btn-none ms-auto d-lg-block d-md-none moder" id="ret">+ discussion</button></li>
@@ -107,7 +139,7 @@
                          <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem; height: 100%;">
                          <div class="d-flex gap-2">
                          <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="rem.png"  class="img light rounded-circle" alt=""></div>
-                         <p class="text-white">esters200</p>
+                         <p class="text-white name-users">esters200</p>
                         </div>
                         </div>
                         <div class=" text-white mt-auto user-describe">
@@ -119,7 +151,7 @@
                             <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
                                 <div class="d-flex gap-2">
                                 <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
-                                <p class="text-white">start</p>
+                                <p class="text-white name-users">start</p>
                                </div>
                                </div>
                                <div class=" text-white mt-auto user-describe">
@@ -131,7 +163,7 @@
                             <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
                                 <div class="d-flex gap-2">
                                 <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
-                                <p class="text-white">start</p>
+                                <p class="text-white name-users">start</p>
                                </div>
                                </div>
                                <div class=" text-white mt-auto user-describe">
@@ -142,7 +174,7 @@
                             <div class="users  gap-2 position-absolute" style="top:2rem;left: 1.3rem;">
                                 <div class="d-flex gap-2">
                                 <div class="users-photo" style="width:2.2rem !important;;height: 2rem !important;;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg"  class="img rounded-circle" alt=""></div>
-                                <p class="text-white">start</p>
+                                <p class="text-white name-users">start</p>
                                </div>
                                </div>
                                <div class=" text-white mt-auto user-describe">
@@ -176,24 +208,24 @@
                         </div>
                     </div>
                   </div>
-                  <div class="row mt-5">
-                    <div class="col-lg-7  col-sm-12 col-md-12 bg-light mode" style="border-radius: 5px 5px 0 0 ;">
+                  <div class="row mt-5 align-items-start">
+                    <div class="col-lg-7  col-sm-12 col-md-12 bg-transparent mode" style="border-radius: 5px 5px 0 0 ;">
                       <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand text-dark ms-2" href="">posts</a>
-                        <button type="bouton" class="ms-auto border-0 bg-transparent">
+                        <a class="navbar-brand text-dark ms-3 name-users fs-1" href="" style="letter-spacing: 2px;font-weight: 400;">post</a>
+                        <button type="bouton" class="ms-auto position-relative border-0 bg-transparent" style="left:-2rem">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
                             <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></button>
                       </nav>
-                      <div class="d-flex flex-column gap-4">
+                      <div class="d-flex flex-column gap-5 py-2">
                         <div class="card bg-light border-0">
                             <div class="card-body">
                                 <div class="card-title d-flex flex-column">
                                     <div class="users-forum d-flex flex-row">
                                        <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                        <p class="ms-3 para">demo@200</p>
+                                        <p class="ms-3 name-users">demo@200</p>
                                         <button type="bouton" class="btn btn-primary ms-auto mb-4 text-center" style="height:30px;font-size:0.8rem;">rejoindre</button>
                                     </div>
                                     <p style="font-family: Arial, Helvetica, sans-serif;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, numquam! Dicta fuga et vel sit tenetur sequi recusandae ipsum debitis, autem nam a voluptatibus at totam ullam impedit molestias nihil?
@@ -226,7 +258,7 @@
                                 <div class="card-title d-flex flex-column">
                                     <div class="users-forum d-flex flex-row">
                                        <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                        <p class="ms-3 para">demo@200</p>
+                                        <p class="ms-3 name-users">demo@200</p>
                                         <span class="text-danger ms-2">minute</span>
                                         <button type="bouton" class="btn btn-primary ms-auto mb-4 text-center" style="height:30px;font-size:0.8rem;">rejoindre</button>
                                     </div>
@@ -255,12 +287,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card border-0">
+                        <div class="card border-0 border-bottom">
                             <div class="card-body">
                                 <div class="card-title d-flex flex-column">
                                     <div class="users-forum d-flex flex-row">
                                        <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="sam1.jpg" class="img rounded-circle" alt=""></div>
-                                        <p class="ms-3 para">demo@200</p>
+                                        <p class="ms-3 name-users">demo@200</p>
+                                        <span class="text-danger ms-2">minute</span>
+                                        <button type="bouton" class="btn btn-primary ms-auto mb-4 text-center" style="height:30px;font-size:0.8rem;">rejoindre</button>
+                                    </div>
+                                    <p style="font-family: Arial, Helvetica, sans-serif;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, numquam! Dicta fuga et vel sit tenetur sequi recusandae ipsum debitis, autem nam a voluptatibus at totam ullam impedit molestias nihil?
+                                    Consequuntur numquam odit, aut hic tempora esse exercitationem atque nemo minima consectetur. Tenetur deleniti nobis accusantium tempore, dolorem sapiente quae repudiandae impedit error praesentium reiciendis illum illo fugit deserunt ab.</p>
+                                   
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button type="bouton" class="btn btn-white rounded-2 enjoy">
+                                        <span class="compte">0</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0501 7.04419C15.4673 5.79254 14.5357 4.5 13.2163 4.5C12.5921 4.5 12.0062 4.80147 11.6434 5.30944L8.47155 9.75H5.85748L5.10748 10.5V18L5.85748 18.75H16.8211L19.1247 14.1428C19.8088 12.7747 19.5406 11.1224 18.4591 10.0408C17.7926 9.37439 16.8888 9 15.9463 9H14.3981L15.0501 7.04419ZM9.60751 10.7404L12.864 6.1813C12.9453 6.06753 13.0765 6 13.2163 6C13.5118 6 13.7205 6.28951 13.627 6.56984L12.317 10.5H15.9463C16.491 10.5 17.0133 10.7164 17.3984 11.1015C18.0235 11.7265 18.1784 12.6814 17.7831 13.472L15.8941 17.25H9.60751V10.7404ZM8.10751 17.25H6.60748V11.25H8.10751V17.25Z" fill="#080341"/>
+                                        </svg>
+                                    </button>
+                                    <button type="bouton" class="btn btn-white enjoy">
+                                        <span class="compte like-dark">0</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20.9752 11.8148L20.2361 11.9426L20.9752 11.8148ZM20.2696 7.73505L19.5306 7.86285L20.2696 7.73505ZM6.93777 3.52293L6.19056 3.45832L6.93777 3.52293ZM6.12561 12.9156L6.87282 12.9802L6.12561 12.9156ZM13.995 18.7786L14.7351 18.6573V18.6573L13.995 18.7786ZM13.3323 14.734L14.0724 14.6128V14.6128L13.3323 14.734ZM6.69814 14.3225L6.20855 14.8907H6.20855L6.69814 14.3225ZM8.13688 15.5623L8.62647 14.9942H8.62647L8.13688 15.5623ZM10.5181 19.2163L9.79208 19.4046L10.5181 19.2163ZM10.9938 21.0501L11.7197 20.8618V20.8618L10.9938 21.0501ZM12.6676 21.9356L12.4382 21.2216L12.4382 21.2216L12.6676 21.9356ZM12.8126 21.8891L13.042 22.6031L13.042 22.6031L12.8126 21.8891ZM9.86195 17.5374L10.5235 17.184V17.184L9.86195 17.5374ZM13.9047 20.7525L13.1787 20.5642V20.5642L13.9047 20.7525ZM11.6742 21.8676L11.3486 22.5433V22.5433L11.6742 21.8676ZM3.9716 2.52928L3.22439 2.46467L3.9716 2.52928ZM3 13.7658L3.74721 13.8304C3.71261 14.2306 3.36893 14.5324 2.96767 14.5151C2.5664 14.4978 2.25 14.1674 2.25 13.7658H3ZM20.2361 11.9426L19.5306 7.86285L21.0087 7.60724L21.7142 11.687L20.2361 11.9426ZM13.245 2.75H8.59635V1.25H13.245V2.75ZM7.68498 3.58754L6.87282 12.9802L5.3784 12.851L6.19056 3.45832L7.68498 3.58754ZM19.5306 7.86285C19.0238 4.93226 16.3813 2.75 13.245 2.75V1.25C17.0712 1.25 20.3708 3.91895 21.0087 7.60724L19.5306 7.86285ZM13.2548 18.8998L12.5921 14.8553L14.0724 14.6128L14.7351 18.6573L13.2548 18.8998ZM7.18773 13.7544L8.62647 14.9942L7.64729 16.1305L6.20855 14.8907L7.18773 13.7544ZM11.244 19.0279L11.7197 20.8618L10.2678 21.2384L9.79208 19.4046L11.244 19.0279ZM12.4382 21.2216L12.5832 21.175L13.042 22.6031L12.897 22.6497L12.4382 21.2216ZM10.5235 17.184C10.8354 17.768 11.0777 18.3866 11.244 19.0279L9.79208 19.4046C9.65573 18.8789 9.45699 18.3711 9.20042 17.8908L10.5235 17.184ZM12.5832 21.175C12.8896 21.0766 13.1072 20.8399 13.1787 20.5642L14.6307 20.9408C14.4252 21.7328 13.819 22.3535 13.042 22.6031L12.5832 21.175ZM11.7197 20.8618C11.7548 20.9968 11.8523 21.1209 11.9998 21.192L11.3486 22.5433C10.8166 22.2869 10.417 21.8137 10.2678 21.2384L11.7197 20.8618ZM11.9998 21.192C12.1345 21.2569 12.2931 21.2682 12.4382 21.2216L12.897 22.6497C12.3873 22.8135 11.8312 22.7758 11.3486 22.5433L11.9998 21.192ZM14.1537 13.0158H19.3348V14.5158H14.1537V13.0158ZM4.71881 2.59389L3.74721 13.8304L2.25279 13.7012L3.22439 2.46467L4.71881 2.59389ZM3.75 2.48726V13.7658H2.25V2.48726H3.75ZM3.22439 2.46467C3.2112 2.61722 3.33146 2.75 3.48671 2.75V1.25C4.21268 1.25 4.78122 1.8721 4.71881 2.59389L3.22439 2.46467ZM14.7351 18.6573C14.8596 19.4174 14.8241 20.1952 14.6307 20.9408L13.1787 20.5642C13.3197 20.0208 13.3456 19.4539 13.2548 18.8998L14.7351 18.6573ZM8.59635 2.75C8.12244 2.75 7.72601 3.11302 7.68498 3.58754L6.19056 3.45832C6.29852 2.20975 7.3427 1.25 8.59635 1.25V2.75ZM8.62647 14.9942C9.30632 15.58 10.0392 16.2773 10.5235 17.184L9.20042 17.8908C8.85404 17.2423 8.3025 16.6951 7.64729 16.1305L8.62647 14.9942ZM21.7142 11.687C21.9695 13.1635 20.8341 14.5158 19.3348 14.5158V13.0158C19.9014 13.0158 20.3332 12.5041 20.2361 11.9426L21.7142 11.687ZM3.48671 2.75C3.63292 2.75 3.75 2.63156 3.75 2.48726H2.25C2.25 1.80474 2.80289 1.25 3.48671 1.25V2.75ZM12.5921 14.8553C12.4344 13.8924 13.1766 13.0158 14.1537 13.0158V14.5158C14.1038 14.5158 14.0639 14.561 14.0724 14.6128L12.5921 14.8553ZM6.87282 12.9802C6.8474 13.2742 6.96475 13.5622 7.18773 13.7544L6.20855 14.8907C5.62022 14.3837 5.31149 13.6247 5.3784 12.851L6.87282 12.9802Z" fill="#1C274C"/>
+                                        </svg></button>
+                                    <button type="bouton" class="btn btn-white enjoy">
+                                        <span class="compte like-dark">0</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21.0039 12C21.0039 16.9706 16.9745 21 12.0039 21C9.9675 21 3.00463 21 3.00463 21C3.00463 21 4.56382 17.2561 3.93982 16.0008C3.34076 14.7956 3.00391 13.4372 3.00391 12C3.00391 7.02944 7.03334 3 12.0039 3C16.9745 3 21.0039 7.02944 21.0039 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0 border-bottom">
+                            <div class="card-body">
+                                <div class="card-title d-flex flex-column">
+                                    <div class="users-forum d-flex flex-row">
+                                       <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="sam1.jpg" class="img rounded-circle" alt=""></div>
+                                        <p class="ms-3 name-users">demo@200</p>
                                         <span class="text-danger ms-2">minute</span>
                                         <button type="bouton" class="btn btn-primary ms-auto mb-4 text-center" style="height:30px;font-size:0.8rem;">rejoindre</button>
                                     </div>
@@ -291,13 +357,13 @@
                         </div>
                       </div>
                       </div>
-                    <div class="col-4 btn-none stick">
+                    <div class="col-4 btn-none  bg-light rounded-3 ms-2">
                         <p class="text-center fs-5">meilleurs commentaires</p>
                         <div class="ranked-coment p-4">
                             <div class="ranked-item">
                                 <div class="users-forum d-flex flex-row">
                                     <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                     <p class="ms-3 para">demo@200</p>
+                                     <p class="ms-3 name-users">demo@200</p>
                                      <p class="ms-auto">nom forum</p>
                                  </div>
                                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam sint neque nobis laborum deleniti odio sit aut eaque id. Labore quo, quasi molestiae laboriosam sapiente esse soluta beatae quaerat.</p>
@@ -305,7 +371,7 @@
                             <div class="ranked-item">
                                 <div class="users-forum d-flex flex-row">
                                     <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                     <p class="ms-3 para">demo@200</p>
+                                     <p class="ms-3 name-users">demo@200</p>
                                      <p class="ms-auto">nom forum</p>
                                  </div>
                                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam sint neque nobis laborum deleniti odio sit aut eaque id. Labore quo, quasi molestiae laboriosam sapiente esse soluta beatae quaerat.</p>
@@ -313,7 +379,7 @@
                             <div class="ranked-item">
                                 <div class="users-forum d-flex flex-row">
                                     <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                     <p class="ms-3 para">demo@200</p>
+                                     <p class="ms-3 name-users">demo@200</p>
                                      <p class="ms-auto">nom forum</p>
                                  </div>
                                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam sint neque nobis laborum deleniti odio sit aut eaque id. Labore quo, quasi molestiae laboriosam sapiente esse soluta beatae quaerat.</p>
@@ -321,7 +387,7 @@
                             <div class="ranked-item">
                                 <div class="users-forum d-flex flex-row">
                                     <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                     <p class="ms-3 para">demo@200</p>
+                                     <p class="ms-3 name-users">demo@200</p>
                                      <p class="ms-auto">nom forum</p>
                                  </div>
                                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam sint neque nobis laborum deleniti odio sit aut eaque id. Labore quo, quasi molestiae laboriosam sapiente esse soluta beatae quaerat.</p>
@@ -329,7 +395,7 @@
                             <div class="ranked-item">
                                 <div class="users-forum d-flex flex-row">
                                     <div class="users-photo-forum" style="width:2.1rem !important;;height: 2rem !important;"><img src="radu-marcusu-mbKApJz6RSU-unsplash.jpg" class="img rounded-circle" alt=""></div>
-                                     <p class="ms-3 para">demo@200</p>
+                                     <p class="ms-3 name-users">demo@200</p>
                                      <p class="ms-auto">nom forum</p>
                                  </div>
                                 <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam sint neque nobis laborum deleniti odio sit aut eaque id. Labore quo, quasi molestiae laboriosam sapiente esse soluta beatae quaerat.</p>
