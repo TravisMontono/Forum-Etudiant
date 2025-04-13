@@ -69,9 +69,6 @@ body::-webkit-scrollbar-thumb{
 body.dark-mode #color{
   color:var(--primary-color);
 }
-.nav-font{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 .open-menu{
     background-color:transparent;
     border: 1px solid silver;
@@ -90,7 +87,6 @@ body.dark-mode #color{
 }
 .nav-link:hover{
   background-color: #007bff;
-  border-radius:5rem;
   color:var(--primary-color);
   transition: 0.3s ease-in;
 }
@@ -164,8 +160,19 @@ shadow{
 .enjoy{
     height:2.5rem;
     background-color: #f8f9fa;
+    border-radius: 20px!important;
+    border: none;
 }
 
+.bouton-hover:hover{
+    background-color: #ebeff3;
+    border-radius: 20px;
+}
+.bouton-joined{
+    height:30px;
+    font-size:0.8rem;
+    text-transform: capitalize;
+}
 /* Styles pour le menu hamburger (responsive) */
 @media only screen  and (max-width: 991.98px) {
     .menu {
